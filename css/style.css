@@ -1,0 +1,124 @@
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: #f1f5f9;
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+    min-height: 100vh;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    background: #0f172a !important; /* Tailwind slate-900 */
+    color: #f8fafc;
+    transition: all 0.3s;
+}
+
+#sidebar.active {
+    margin-left: -250px;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: #1e293b;
+    border-bottom: 1px solid #334155;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+}
+
+#sidebar ul li a {
+    padding: 12px 20px;
+    font-size: 1.05rem;
+    display: block;
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+#sidebar ul li a:hover {
+    color: #ffffff;
+    background: #334155;
+}
+
+#sidebar ul li.active > a {
+    color: #fff;
+    background: #2563eb;
+    border-left: 4px solid #60a5fa;
+}
+
+#sidebar .dropdown-toggle::after {
+    float: right;
+    margin-top: 8px;
+}
+
+/* Content Area */
+#content {
+    background-color: #f8fafc;
+    min-width: 0;
+    overflow-x: hidden;
+}
+
+.navbar {
+    padding: 15px 20px;
+    background: #ffffff !important;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+/* Cards / Dashboard elements */
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -2px rgba(0,0,0,0.05);
+    margin-bottom: 1.5rem;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.05);
+}
+
+.card-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #f1f5f9;
+    border-top-left-radius: 12px !important;
+    border-top-right-radius: 12px !important;
+    font-weight: 600;
+    padding: 1rem 1.25rem;
+}
+
+/* Dashboard Stat Cards */
+.stat-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card .icon {
+    position: absolute;
+    right: -10px;
+    bottom: -10px;
+    font-size: 5rem;
+    opacity: 0.15;
+    z-index: 0;
+}
+
+.stat-card .inner {
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+}

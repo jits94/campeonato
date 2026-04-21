@@ -1,0 +1,117 @@
+body {
+    font-family: 'Outfit', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8fafc;
+}
+
+.login-container {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.login-left {
+    flex: 1.2;
+    background: url('https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=1470&auto=format&fit=crop') center/cover no-repeat;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    padding: 5rem;
+    overflow: hidden;
+}
+
+.login-left .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 58, 138, 0.8) 100%);
+    z-index: 1;
+}
+
+.login-left .content {
+    position: relative;
+    z-index: 2;
+    animation: fadeIn 1.5s ease;
+}
+
+.login-left h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+.login-left h1 span {
+    color: #3b82f6;
+}
+
+.login-left p {
+    font-size: 1.2rem;
+    max-width: 80%;
+    color: #e2e8f0;
+}
+
+.login-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 2rem;
+    position: relative;
+}
+
+.form-wrapper {
+    width: 100%;
+    max-width: 400px;
+    animation: slideUp 0.8s ease;
+}
+
+.form-wrapper h2 {
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.form-floating > .form-control:focus ~ label {
+    color: #3b82f6;
+}
+
+.form-control {
+    border-radius: 0.75rem;
+    padding: 1rem;
+    border: 2px solid #e2e8f0;
+    transition: all 0.3s;
+}
+
+.form-control:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 0.25rem rgba(59, 130, 246, 0.25);
+}
+
+.btn-primary {
+    background: linear-gradient(to right, #2563eb, #3b82f6);
+    border: none;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.4);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
